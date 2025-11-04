@@ -1,0 +1,88 @@
+{
+  "name": "discord-lanyard-activity",
+  "version": "1.0.0",
+  "description": "A headless, framework-agnostic Discord activity tracker using Lanyard API. Works with React, Vue, Svelte, and vanilla JavaScript.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/frameworks/react.mjs",
+      "require": "./dist/frameworks/react.js",
+      "types": "./dist/frameworks/react.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/frameworks/vue.mjs",
+      "require": "./dist/frameworks/vue.js",
+      "types": "./dist/frameworks/vue.d.ts"
+    },
+    "./svelte": {
+      "import": "./dist/frameworks/svelte.mjs",
+      "require": "./dist/frameworks/svelte.js",
+      "types": "./dist/frameworks/svelte.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "discord",
+    "lanyard",
+    "activity",
+    "presence",
+    "websocket",
+    "react",
+    "vue",
+    "svelte",
+    "headless",
+    "framework-agnostic"
+  ],
+  "author": "DevRohit06",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevRohit06/discord-lanyard-activity"
+  },
+  "bugs": {
+    "url": "https://github.com/DevRohit06/discord-lanyard-activity/issues"
+  },
+  "homepage": "https://github.com/DevRohit06/discord-lanyard-activity#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0",
+    "svelte": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "react": "^18.2.0",
+    "svelte": "^4.2.8",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vue": "^3.4.0"
+  }
+}

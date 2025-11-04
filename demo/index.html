@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Lanyard Activity - Live Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Discord Lanyard Activity</h1>
+        <p class="hero-subtitle">A headless, framework-agnostic Discord activity tracker using Lanyard API</p>
+        <div class="hero-buttons">
+          <a href="https://github.com/DevRohit06/discord-lanyard-activity" class="btn btn-primary" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            View on GitHub
+          </a>
+          <a href="https://www.npmjs.com/package/discord-lanyard-activity" class="btn btn-secondary" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
+            </svg>
+            npm install
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Demo Section -->
+  <section class="demo-section">
+    <div class="container">
+      <h2 class="section-title">Live Demo</h2>
+      <p class="section-subtitle">Real-time Discord presence tracking powered by Lanyard API</p>
+      
+      <div class="demo-grid">
+        <!-- Discord Activity Card -->
+        <div class="demo-card" id="discord-card">
+          <div class="card-header">
+            <h3>Discord Activity</h3>
+            <span class="status-badge" id="connection-status">Connecting...</span>
+          </div>
+          <div class="card-content" id="activity-content">
+            <div class="loading">
+              <div class="spinner"></div>
+              <p>Loading Discord activity...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Card -->
+        <div class="features-card">
+          <h3>Features</h3>
+          <ul class="features-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Real-time presence updates
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Music services integration
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Game & app tracking
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Auto-reconnection
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Framework agnostic
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              TypeScript support
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Framework Examples Section -->
+  <section class="frameworks-section">
+    <div class="container">
+      <h2 class="section-title">Framework Support</h2>
+      <p class="section-subtitle">Works seamlessly with your favorite frameworks</p>
+      
+      <div class="frameworks-grid">
+        <div class="framework-card">
+          <div class="framework-icon">
+            <svg viewBox="0 0 24 24" fill="#61DAFB">
+              <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/>
+            </svg>
+          </div>
+          <h3>React</h3>
+          <p>Simple hooks for React 16.8+</p>
+        </div>
+
+        <div class="framework-card">
+          <div class="framework-icon">
+            <svg viewBox="0 0 24 24" fill="#4FC08D">
+              <path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"/>
+            </svg>
+          </div>
+          <h3>Vue 3</h3>
+          <p>Composables for Vue 3</p>
+        </div>
+
+        <div class="framework-card">
+          <div class="framework-icon">
+            <svg viewBox="0 0 24 24" fill="#FF3E00">
+              <path d="M10.354 21.125a4.44 4.44 0 0 1-4.765-1.767 4.109 4.109 0 0 1-.703-3.107 3.898 3.898 0 0 1 .134-.522l.105-.321.287.21a7.21 7.21 0 0 0 2.186 1.092l.208.063-.02.208a1.253 1.253 0 0 0 .226.83 1.337 1.337 0 0 0 1.435.533 1.231 1.231 0 0 0 .343-.15l5.59-3.562a1.164 1.164 0 0 0 .524-.778 1.242 1.242 0 0 0-.211-.937 1.338 1.338 0 0 0-1.435-.533 1.23 1.23 0 0 0-.343.15l-2.133 1.36a4.078 4.078 0 0 1-1.135.499 4.44 4.44 0 0 1-4.765-1.766 4.108 4.108 0 0 1-.702-3.108 3.855 3.855 0 0 1 1.742-2.582l5.589-3.563a4.072 4.072 0 0 1 1.135-.499 4.44 4.44 0 0 1 4.765 1.767 4.109 4.109 0 0 1 .703 3.107 3.943 3.943 0 0 1-.134.522l-.105.321-.286-.21a7.204 7.204 0 0 0-2.187-1.093l-.208-.063.02-.207a1.255 1.255 0 0 0-.226-.831 1.337 1.337 0 0 0-1.435-.532 1.231 1.231 0 0 0-.343.15L8.62 9.368a1.162 1.162 0 0 0-.524.778 1.24 1.24 0 0 0 .211.937 1.338 1.338 0 0 0 1.435.533 1.235 1.235 0 0 0 .344-.15l2.131-1.36a4.025 4.025 0 0 1 1.136-.499 4.44 4.44 0 0 1 4.765 1.767 4.108 4.108 0 0 1 .702 3.107 3.857 3.857 0 0 1-1.742 2.583l-5.589 3.562a4.072 4.072 0 0 1-1.135.499z"/>
+            </svg>
+          </div>
+          <h3>Svelte</h3>
+          <p>Native stores for Svelte</p>
+        </div>
+
+        <div class="framework-card">
+          <div class="framework-icon">
+            <svg viewBox="0 0 24 24" fill="#F7DF1E">
+              <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+            </svg>
+          </div>
+          <h3>Vanilla JS</h3>
+          <p>Pure JavaScript, no framework needed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Activities Section -->
+  <section class="activities-section">
+    <div class="container">
+      <h2 class="section-title">Supported Activities</h2>
+      <p class="section-subtitle">Track what matters to you</p>
+      
+      <div class="activities-grid">
+        <div class="activity-category">
+          <div class="category-icon">🎵</div>
+          <h3>Music Services</h3>
+          <p>Native Discord integration support for:</p>
+          <ul class="activity-list">
+            <li>Spotify</li>
+            <li>YouTube Music</li>
+            <li>Apple Music</li>
+            <li>SoundCloud</li>
+            <li>Deezer</li>
+            <li>Tidal</li>
+            <li>Amazon Music</li>
+            <li>Pandora</li>
+          </ul>
+        </div>
+
+        <div class="activity-category highlight-card">
+          <div class="category-icon">🚀</div>
+          <h3>Enhanced with PreMID</h3>
+          <p class="premid-tagline">Track 2000+ services with rich presence!</p>
+          <ul class="activity-list">
+            <li>🎬 Netflix, YouTube, Twitch</li>
+            <li>🎮 Steam, Epic Games, Xbox</li>
+            <li>💻 VS Code, GitHub, GitLab</li>
+            <li>🎨 Figma, Canva, Adobe</li>
+            <li>📱 Twitter, Reddit, Discord</li>
+            <li>🎧 All music web players</li>
+          </ul>
+          <div class="premid-actions">
+            <a href="https://premid.app/" target="_blank" class="btn btn-primary">
+              Get PreMID
+            </a>
+            <a href="https://premid.app/store" target="_blank" class="btn btn-secondary">
+              Browse Store
+            </a>
+          </div>
+        </div>
+
+        <div class="activity-category">
+          <div class="category-icon">🎮</div>
+          <h3>Games & Apps</h3>
+          <p>Automatically tracked by Discord:</p>
+          <ul class="activity-list">
+            <li>Steam games</li>
+            <li>Epic Games</li>
+            <li>League of Legends</li>
+            <li>Valorant</li>
+            <li>Minecraft</li>
+            <li>And 100+ more</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="premid-info-card">
+        <div class="premid-info-content">
+          <h3>💡 Why Use PreMID?</h3>
+          <p>PreMID is a powerful browser extension and desktop app that displays rich presence for thousands of websites and services on Discord. When combined with this package, you get:</p>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span>Track activities from 2000+ websites</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span>Rich presence with thumbnails & details</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span>Automatic Lanyard API integration</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <span>Real-time updates on your website</span>
+            </div>
+          </div>
+          <p class="setup-note"><strong>Setup is easy:</strong> Install extension + desktop app → Browse supported services → Your activity appears automatically! All data flows through Lanyard and works with this package out of the box.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Examples Section -->
+  <section class="code-section">
+    <div class="container">
+      <h2 class="section-title">Installation & Setup</h2>
+      <p class="section-subtitle">Get started in minutes with your favorite framework</p>
+      
+      <!-- Installation Steps -->
+      <div class="install-section">
+        <h3 class="install-title">1. Install the Package</h3>
+        <div class="code-panel active">
+          <button class="copy-btn" data-copy="install-npm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre><code class="language-bash"># Using npm
+npm install discord-lanyard-activity
+
+# Using yarn
+yarn add discord-lanyard-activity
+
+# Using pnpm
+pnpm add discord-lanyard-activity
+
+# Using bun
+bun add discord-lanyard-activity</code></pre>
+        </div>
+      </div>
+
+      <div class="install-section">
+        <h3 class="install-title">2. Get Your Discord User ID</h3>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Enable Developer Mode</h4>
+              <p>Go to Discord Settings → Advanced → Enable Developer Mode</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Copy Your User ID</h4>
+              <p>Right-click your profile → Copy User ID</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Join Lanyard Discord</h4>
+              <p>Join the <a href="https://discord.gg/lanyard" target="_blank">Lanyard Discord server</a> to enable tracking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="install-section">
+        <h3 class="install-title">3. Implement in Your Project</h3>
+        <p class="install-subtitle">Choose your framework and follow the example below</p>
+      </div>
+      
+      <div class="code-tabs">
+        <button class="tab-btn active" data-tab="react">React</button>
+        <button class="tab-btn" data-tab="vue">Vue</button>
+        <button class="tab-btn" data-tab="svelte">Svelte</button>
+        <button class="tab-btn" data-tab="vanilla">Vanilla JS</button>
+      </div>
+
+      <div class="code-content">
+        <div class="code-panel active" data-panel="react">
+          <button class="copy-btn" data-copy="react">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre><code class="language-typescript">import { useDiscordActivity } from 'discord-lanyard-activity/react';
+
+function App() {
+  const { data, isLoading, error } = useDiscordActivity({
+    userId: 'YOUR_DISCORD_USER_ID',
+  });
+
+  if (isLoading) return &lt;div&gt;Loading...&lt;/div&gt;;
+  if (error) return &lt;div&gt;Error: {error.message}&lt;/div&gt;;
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{data.discord_user.username}&lt;/h2&gt;
+      &lt;p&gt;Status: {data.discord_status}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+        </div>
+
+        <div class="code-panel" data-panel="vue">
+          <button class="copy-btn" data-copy="vue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre><code class="language-typescript">&lt;script setup&gt;
+import { useDiscordActivity } from 'discord-lanyard-activity/vue';
+
+const { data, isLoading, error } = useDiscordActivity({
+  userId: 'YOUR_DISCORD_USER_ID',
+});
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div v-if="isLoading"&gt;Loading...&lt;/div&gt;
+  &lt;div v-else-if="error"&gt;Error: {{ error.message }}&lt;/div&gt;
+  &lt;div v-else&gt;
+    &lt;h2&gt;{{ data.discord_user.username }}&lt;/h2&gt;
+    &lt;p&gt;Status: {{ data.discord_status }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+        </div>
+
+        <div class="code-panel" data-panel="svelte">
+          <button class="copy-btn" data-copy="svelte">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre><code class="language-typescript">&lt;script&gt;
+  import { useDiscordActivity } from 'discord-lanyard-activity/svelte';
+  
+  const activity = useDiscordActivity({
+    userId: 'YOUR_DISCORD_USER_ID',
+  });
+&lt;/script&gt;
+
+{#if $activity.isLoading}
+  &lt;div&gt;Loading...&lt;/div&gt;
+{:else if $activity.error}
+  &lt;div&gt;Error: {$activity.error.message}&lt;/div&gt;
+{:else if $activity.data}
+  &lt;h2&gt;{$activity.data.discord_user.username}&lt;/h2&gt;
+  &lt;p&gt;Status: {$activity.data.discord_status}&lt;/p&gt;
+{/if}</code></pre>
+        </div>
+
+        <div class="code-panel" data-panel="vanilla">
+          <button class="copy-btn" data-copy="vanilla">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+          <pre><code class="language-javascript">import { DiscordActivityClient } from 'discord-lanyard-activity';
+
+const client = new DiscordActivityClient({
+  userId: 'YOUR_DISCORD_USER_ID',
+});
+
+client.subscribe((state) => {
+  if (state.data) {
+    console.log('Username:', state.data.discord_user.username);
+    console.log('Status:', state.data.discord_status);
+  }
+});
+
+client.connect();</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built with ❤️ by <a href="https://github.com/DevRohit06" target="_blank">DevRohit06</a></p>
+      <p>Powered by <a href="https://github.com/Phineas/lanyard" target="_blank">Lanyard API</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
